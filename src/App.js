@@ -4,15 +4,31 @@ import PRICING_DATA from "./assets/data/data";
 import "./App.css";
 
 function App() {
+  const [isPriceYearly, setIsPriceYearly] = useState(true);
+
+  const handleToggle = () => {
+    setIsPriceYearly((prevMode) => !prevMode);
+  };
+
   return (
     <div className="app">
       <div className="title">
         <h1>Our Pricing</h1>
       </div>
       <div className="toggle_period">
-        <span>Annually</span>
-        <span>Toggle</span>
-        <span>Monthly</span>
+        <p>Annually</p>
+
+        <label className="switch">
+          <input type="checkbox" />
+          <span
+            className="slider round"
+            onClick={() => {
+              handleToggle();
+            }}
+          ></span>
+        </label>
+
+        <p>Monthly</p>
       </div>
       <div className="cards">
         {PRICING_DATA.map(
@@ -24,6 +40,7 @@ function App() {
             allowedUsers,
             sendData,
             highlight,
+            priceMonthly,
           }) => (
             <MainCard
               key={id}
@@ -34,6 +51,8 @@ function App() {
               allowedUsers={allowedUsers}
               sendData={sendData}
               highlight={highlight}
+              priceMonthly={priceMonthly}
+              isPriceYearly={isPriceYearly}
             />
           )
         )}

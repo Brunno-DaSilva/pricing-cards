@@ -1,8 +1,9 @@
 import React from "react";
-
 import "./usePricingCardStyles.css";
 
-function PricingCard({ price, highlight }) {
+function PricingCard({ price, priceMonthly, highlight, isPriceYearly }) {
+  console.log("isPriceYearly from Pricing Card: =>", isPriceYearly);
+
   return (
     <div className="PricingCard">
       <h2
@@ -19,7 +20,8 @@ function PricingCard({ price, highlight }) {
         >
           $
         </span>
-        <span>{price}</span>
+
+        {isPriceYearly ? <span> {price}</span> : <span> {priceMonthly}</span>}
       </h2>
     </div>
   );

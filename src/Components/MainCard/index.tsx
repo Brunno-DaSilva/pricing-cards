@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import PricingCard from "../PricingCard/index.tsx";
 import Title from "../Title/index.tsx";
 import CardInfo from "../CardInfo/index.tsx";
@@ -14,6 +14,8 @@ function MainCard({
   allowedUsers,
   sendData,
   highlight,
+  priceMonthly,
+  isPriceYearly,
 }) {
   return (
     <div
@@ -27,7 +29,12 @@ function MainCard({
       }
     >
       <Title title={title} highlight={highlight} />
-      <PricingCard price={price} highlight={highlight} />
+      <PricingCard
+        price={price}
+        priceMonthly={priceMonthly}
+        highlight={highlight}
+        isPriceYearly={isPriceYearly}
+      />
       <CardInfo
         storage={storage}
         allowedUsers={allowedUsers}
