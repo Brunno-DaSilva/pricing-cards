@@ -1,0 +1,20 @@
+.Title {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Title__text {
+  font-size: 0.8375rem;
+  letter-spacing: 1px;
+  color: var(--GrayishBlue);
+  margin-top: 2rem;
+}
+
+.Title__text_isPurple {
+  font-size: 0.9375rem;
+  letter-spacing: 1px;
+  color: var(--veryLightGrayishBlue);
+  margin-top: 3rem;
+}

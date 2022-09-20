@@ -1,0 +1,32 @@
+.PricingCard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.PricingCard__main_text {
+  color: hsl(0, 0%, 100%);
+  font-size: 3.7rem;
+  display: flex;
+  align-items: center;
+}
+
+.PricingCard__side_text {
+  color: var(--DarkGrayishBlue);
+  font-size: 3.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.PricingCard__main_dollar_sign {
+  color: hsl(0, 0%, 100%);
+  font-size: 2rem !important;
+  margin-right: 0.5rem;
+}
+
+.PricingCard__side_dollar_sign {
+  color: var(--DarkGrayishBlue);
+  font-size: 2rem !important;
+  margin-right: 0.5rem;
+}

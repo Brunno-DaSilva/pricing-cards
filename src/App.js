@@ -1,23 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import MainCard from "./Components/MainCard/index.tsx";
+import PRICING_DATA from "./assets/data/data";
+import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <div className="title">
+        <h1>Our Pricing</h1>
+      </div>
+      <div className="toggle_period">
+        <span>Annually</span>
+        <span>Toggle</span>
+        <span>Monthly</span>
+      </div>
+      <div className="cards">
+        {PRICING_DATA.map(
+          ({
+            id,
+            title,
+            price,
+            storage,
+            allowedUsers,
+            sendData,
+            highlight,
+          }) => (
+            <MainCard
+              key={id}
+              id={id}
+              title={title}
+              price={price}
+              storage={storage}
+              allowedUsers={allowedUsers}
+              sendData={sendData}
+              highlight={highlight}
+            />
+          )
+        )}
+      </div>
     </div>
   );
 }
