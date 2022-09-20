@@ -11,7 +11,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border-top: 1px solid var(--lightGrayishBlue);
+  border-top: 1px solid hsl(234, 14%, 89%);
   padding: 1rem;
   margin-top: 1rem;
 }
@@ -21,14 +21,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border-top: 1px solid var(--lightGrayishBlue);
+  border-top: 1px solid hsl(234, 14%, 89%);
   padding: 1rem;
 }
 
 .CardInfo__send_data {
   width: 80%;
-  border-top: 1px solid var(--lightGrayishBlue);
-  border-bottom: 1px solid var(--lightGrayishBlue);
+  border-top: 1px solid hsl(234, 14%, 89%);
+  border-bottom: 1px solid hsl(234, 14%, 89%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -36,9 +36,11 @@
   margin-bottom: 1.5rem;
 }
 
-.CardInfo__storage span,
-.CardInfo__users_allowed span,
-.CardInfo__send_data span {
+.mainCardText {
   font-size: 0.8rem;
   color: var(--veryLightGrayishBlue);
+}
+.sideCardsText {
+  font-size: 0.8rem;
+  color: var(--GrayishBlue);
 }
