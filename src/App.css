@@ -19,7 +19,7 @@
   margin-top: 5rem;
 }
 .title h1 {
-  color: var(--DarkGrayishBlue) !important;
+  color: var(--GrayishBlue) !important;
 }
 .cards {
   display: flex;
